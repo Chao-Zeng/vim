@@ -19,6 +19,7 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'yegappan/grep'
 Plugin 'fholgado/minibufexpl.vim'
+Plugin 'rdnetto/YCM-Generator'
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 Plugin 'taglist.vim'
@@ -49,7 +50,9 @@ filetype plugin indent on    " required
 set nocompatible
 
 "enable mouse
-"set mouse=a
+set mouse=a
+
+let mapleader = ","
 
 "colors scheme
 colorscheme desert
@@ -79,6 +82,8 @@ let Tlist_Exit_OnlyWindow=1
 
 "YouCompleteMe setting
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+nnoremap <leader>jd :YcmCompleter GoTo<CR>
+nnoremap <leader>ji :YcmCompleter GoToImprecise<CR>
 
 "NERDTree setting
 let NERDTreeShowHidden=1
