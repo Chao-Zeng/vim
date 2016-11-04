@@ -20,6 +20,7 @@ Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'yegappan/grep'
 Plugin 'fholgado/minibufexpl.vim'
 Plugin 'rdnetto/YCM-Generator'
+Plugin 'nathanaelkane/vim-indent-guides'
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 Plugin 'taglist.vim'
