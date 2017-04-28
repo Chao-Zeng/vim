@@ -1,3 +1,6 @@
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                          Vundle configuration                           "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -46,31 +49,51 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 "############Plugin Manage############################
 
-"charles's vim setting
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"              general settings                      "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "close compatible modle
 set nocompatible
 
-"enable mouse
-set mouse=a
 
 let mapleader = ","
-
-"colors scheme
-colorscheme desert
+colorscheme desert		"colors scheme
 
 filetype plugin indent on
 
 syntax on
 set number
 
+
+" editor setting
+set cursorline			" highlights the current line
+set ignorecase          " case insensitive searching
+set smartcase           " but become case sensitive if you type uppercase characters
+set nobackup            " no backup~ files
+set laststatus=2        " the statusline is now always shown
+set autoread            " auto read when a file is changed from the outside
+set mouse=a				" enables the mouse in all modes, set mouse-=a for close mouse
+set foldlevelstart=99   " all folds open by default
+set history=1000        " remember more commands and search history
+set undolevels=1000     " use many levels of undo
+
+" toggles vim's paste mode; when we want to paste something into vim from a
+" different application, turning on paste mode prevents the insertion of extra
+" whitespace
+set pastetoggle=<F7>
+
 "indent setting
-set expandtab
-set cindent
-set smartindent
-set autoindent
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+set expandtab			" turn a tab into spaces
+set cindent				" smart indenting for c-like code
+set smartindent			" smart auto indenting
+set autoindent			" on new lines, match indent of previous line
+set copyindent          " copy the previous indentation on autoindenting
+set shiftround          " makes indenting a multiple of shiftwidth
+set smarttab            " smart tab handling for indenting
+set tabstop=4			" number of spaces a tab counts for
+set softtabstop=4		" spaces for autoindents
+set shiftwidth=4		" spaces for autoindents
 
 "code fold
 set foldmethod=indent
