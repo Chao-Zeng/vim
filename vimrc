@@ -19,11 +19,11 @@ Plugin 'VundleVim/Vundle.vim'
 
 " plugin on GitHub repo
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'octol/vim-cpp-enhanced-highlight'
+Plugin 'rdnetto/YCM-Generator'
 Plugin 'yegappan/grep'
 Plugin 'fholgado/minibufexpl.vim'
-Plugin 'rdnetto/YCM-Generator'
 Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'octol/vim-cpp-enhanced-highlight'
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 Plugin 'taglist.vim'
@@ -50,21 +50,18 @@ filetype plugin indent on    " required
 "############Plugin Manage############################
 
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"              general settings                      "
-""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"close compatible modle
-set nocompatible
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                          general settings                               "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set nocompatible		" close compatible modle
 
+colorscheme desert		" colors scheme
+syntax on				" turn on syntax highlight
+set number				" show line number
+let mapleader = ","		" set <leader> to ,
 
-let mapleader = ","
-colorscheme desert		"colors scheme
-
+" turn on filetype plugins
 filetype plugin indent on
-
-syntax on
-set number
-
 
 " editor setting
 set cursorline			" highlights the current line
@@ -100,14 +97,21 @@ set foldmethod=indent
 set foldmethod=syntax
 set nofoldenable
 
-"taglist setting
-let Tlist_Show_One_File=1
-let Tlist_Exit_OnlyWindow=1
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                          plugin settings                               "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 "YouCompleteMe setting
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_min_num_identifier_candidate_chars = 4
 nnoremap <leader>jd :YcmCompleter GoTo<CR>
 nnoremap <leader>ji :YcmCompleter GoToImprecise<CR>
+
+"taglist setting
+let Tlist_Show_One_File=1
+let Tlist_Exit_OnlyWindow=1
 
 "NERDTree setting
 let NERDTreeShowHidden=1
