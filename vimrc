@@ -65,6 +65,7 @@ filetype plugin indent on
 
 " editor setting
 set cursorline			" highlights the current line
+set ruler               " show line and column number of the cursor
 set ignorecase          " case insensitive searching
 set smartcase           " but become case sensitive if you type uppercase characters
 set nobackup            " no backup~ files
@@ -74,6 +75,7 @@ set mouse=a				" enables the mouse in all modes, set mouse-=a for close mouse
 set foldlevelstart=99   " all folds open by default
 set history=1000        " remember more commands and search history
 set undolevels=1000     " use many levels of undo
+set hlsearch            " highlight search
 
 " toggles vim's paste mode; when we want to paste something into vim from a
 " different application, turning on paste mode prevents the insertion of extra
