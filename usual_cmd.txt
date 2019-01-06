@@ -1,0 +1,32 @@
+1.vim乱码
+iconv -f gbk -t utf-8 Makefile -o Makefile && dos2unix Makefile
+find . -type f  | xargs -t -I '{}' iconv -f gbk -t utf-8 {} -o {}
+find . -type f  | xargs -t -I '{}' dos2unix {}
+
+fileencoding gbk -> utf-8
+iconv -f encoding -t encoding inputfile
+iconv -f GBK -t UTF-8 file1 -o file2
+
+fileformat dos -> unix
+dos2unix inputfile
+dos2unix -n inputfile outputfile
+
+
+example
+$ file aaa
+aaa: ISO-8859 text, with CRLF line terminators
+
+$ iconv -f gbk -t utf-8 aaa -o aaa
+
+$ file aaa
+aaa: UTF-8 Unicode text, with CRLF line terminators
+
+$ dos2unix aaa
+
+$ file aaa
+aaa: UTF-8 Unicode text
+
+enca命令
+find . -type f | xargs -t -I '{}' enca -L chinese -x utf-8 {}
+find . -type f | xargs -t -I '{}' dos2unix {}
+
