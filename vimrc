@@ -53,25 +53,25 @@ filetype plugin indent on    " required
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                          general settings                               "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set nocompatible		" close compatible modle
+set nocompatible        " close compatible modle
 
-colorscheme desert		" colors scheme
-syntax on				" turn on syntax highlight
-set number				" show line number
-let mapleader = ","		" set <leader> to ,
+colorscheme desert      " colors scheme
+syntax on               " turn on syntax highlight
+set number              " show line number
+let mapleader = ","     " set <leader> to ,
 
 " turn on filetype plugins
 filetype plugin indent on
 
 " editor setting
-set cursorline			" highlights the current line
+set cursorline          " highlights the current line
 set ruler               " show line and column number of the cursor
 set ignorecase          " case insensitive searching
 set smartcase           " but become case sensitive if you type uppercase characters
 set nobackup            " no backup~ files
 set laststatus=2        " the statusline is now always shown
 set autoread            " auto read when a file is changed from the outside
-"set mouse=a				" enables the mouse in all modes, set mouse-=a for close mouse
+"set mouse=a            " enables the mouse in all modes, set mouse-=a for close mouse
 set foldlevelstart=99   " all folds open by default
 set history=1000        " remember more commands and search history
 set undolevels=1000     " use many levels of undo
@@ -84,15 +84,16 @@ set backspace=indent,eol,start    " enable backspace in insert mode
 set pastetoggle=<F7>
 
 "indent setting
-set cindent				" smart indenting for c-like code
+set cindent             " smart indenting for c-like code
 set shiftround          " makes indenting a multiple of shiftwidth
-set shiftwidth=4		" Number of spaces to use for each step of (auto)indent.
+set shiftwidth=4        " Number of spaces to use for each step of (auto)indent.
 " only use spaces
-set expandtab			" turn a tab into spaces
-set tabstop=4			" number of spaces a tab counts for
+set expandtab           " turn a tab into spaces
+set tabstop=4           " number of spaces a tab counts for
+" replace tab with spaces command :%retab
 " mix of tabs and spaces
 "set noexpandtab
-"set softtabstop=4		" spaces for tab looks like
+"set softtabstop=4      " spaces for tab looks like
 
 "code fold
 set foldmethod=indent
