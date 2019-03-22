@@ -72,6 +72,7 @@ set nobackup            " no backup~ files
 set laststatus=2        " the statusline is now always shown
 set autoread            " auto read when a file is changed from the outside
 set mouse=v             " mouse mode n,v,a
+set clipboard=unnamed   " use system clipboard
 set foldlevelstart=99   " all folds open by default
 set history=1000        " remember more commands and search history
 set undolevels=1000     " use many levels of undo
