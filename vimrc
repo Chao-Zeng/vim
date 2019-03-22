@@ -71,7 +71,7 @@ set smartcase           " but become case sensitive if you type uppercase charac
 set nobackup            " no backup~ files
 set laststatus=2        " the statusline is now always shown
 set autoread            " auto read when a file is changed from the outside
-"set mouse=a            " enables the mouse in all modes, set mouse-=a for close mouse
+set mouse=v             " mouse mode n,v,a
 set foldlevelstart=99   " all folds open by default
 set history=1000        " remember more commands and search history
 set undolevels=1000     " use many levels of undo
